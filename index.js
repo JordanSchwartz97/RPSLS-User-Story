@@ -1,1 +1,2 @@
-console.log("Hello World");
+const game = require("./classes/game");
+game.welcomeMenu();
