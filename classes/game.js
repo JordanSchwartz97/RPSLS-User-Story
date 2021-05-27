@@ -1,38 +1,40 @@
-function welcomeMenu(){
-    console.log("Welcome to Jordan's RPSLS game. This is a rock paper scissors style game. You can choose to play against an AI or another human. In order to win the game you must win at least 2 of the 3 rounds of RPSLS.");
-    const modePrompt = require("prompt-sync")();
-    const modeChoice = modePrompt("Please select a mode to play against.'human','ai','quit'").toLowerCase;
-    switch(modeChoice)
-    {
-        case "human":
-        console.log("You've selected Human.");
-        break;
+const Human  = require('./Human');
+const Player  = require('./Player');
+const Ai = require('./Ai');
+const modePrompt = require("prompt-sync")();
 
-        case "ai":
-            console.log("You've selected Ai.");
-        break;
-        case "quit":
-        break;
-        default:
-        console.log("Invalid Input, Please try again.");
-        break;
-        
+class Game {
+    constructor(){
+        this.player1 = new Human("Player 1")
+        this.player2 = new Ai("Player 2")
     }
-   
+    run(){
+        this.welcomeMenu();
+    }
+    
+  
+    
+    welcomeMenu(){
+        console.log("Welcome to Jordan's RPSLS game. This game is based off the classic RPS game. In order to win you must win 2 out of the 3 rounds.");
+        let modeSelection = modePrompt("Please select a mode.'Ai' or 'Human'");
+        switch(modeSelection.toLowerCase()){
+            case "ai":
+                console.log("You've Selected to play against an ai!");
+                this.player1.chooseAGesture();
+                this.player2.randomGestureSelection();
+                break;
+            case "human":
+                console.log("You've Selected to play against another human!");
+                this.player1.chooseAGesture();
+                this.player2.chooseAGesture();
+                break;
+            default:
+                break;
+        }
+    }
+    
+        
+  
 }
 
-    function gestureSelection(){
-    const gesturePrompt = require("prompt-sync")();
-    const gestureSelection = gesturePrompt("Please select a gesture to throw down.'Rock,'Scissors','Paper','Lizard','Spock'").toLowerCase;
-    }
-
-
-
-
-
-
-
-
-
-
-module.exports.welcomeMenu = welcomeMenu;
+module.exports = Game;
