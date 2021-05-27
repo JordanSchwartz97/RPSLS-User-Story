@@ -6,7 +6,7 @@ class Human extends Player {
     } 
     chooseAGesture(){
         let gestureSelection = gesturePrompt("Please choose a gesture.'rock','paper','scissors','lizard','spock'").toLowerCase();
-        console.log("You selected " + gestureSelection + ".")
+        console.log(this.name + " selected " + gestureSelection + ".")
         return gestureSelection;
     }
 }
