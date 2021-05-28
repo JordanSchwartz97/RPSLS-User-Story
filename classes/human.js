@@ -1,13 +1,14 @@
 const Player = require('./Player')
 const gesturePrompt = require("prompt-sync")();
 class Human extends Player {
-    constructor(name,listOfGestures,gestureSelection){
-        super(name,listOfGestures,gestureSelection)
+    constructor(name){
+        super(name);
     } 
     chooseAGesture(){
-        let gestureSelection = gesturePrompt("Please choose a gesture.'rock','paper','scissors','lizard','spock'").toLowerCase();
-        console.log(this.name + " selected " + gestureSelection + ".")
-        return gestureSelection;
+        this.gestureSelection = gesturePrompt("Please choose a gesture.'Rock','Paper','Scissors','Lizard','Spock'").toLowerCase();
+        console.log(this.name + " selected " + this.gestureSelection + ".")
+        return;
     }
+    
 }
 module.exports = Human;

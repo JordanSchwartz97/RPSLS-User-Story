@@ -2,7 +2,7 @@
 class Player {
     constructor(name){
     this.name = name;
-    this.listOfGestures = ["Rock","Paper","Scissors","Lizard","Spock"];
+    this.listOfGestures = ["rock","paper","scissors","lizard","spock"];
     this.gestureSelection;
     this.score = 0;
     }
