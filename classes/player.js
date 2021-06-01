@@ -6,7 +6,6 @@ class Player {
     this.gestureSelection;
     this.score = 0;
     }
-   
 }
 
 module.exports = Player;

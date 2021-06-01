@@ -11,9 +11,6 @@ class Ai extends Player {
         console.log(this.name + " selected "  + this.gestureSelection + ".");
         return this.gestureSelection;  
     }
-
-
-
 }
 
 module.exports = Ai;
