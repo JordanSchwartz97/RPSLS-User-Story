@@ -45,6 +45,7 @@ class Game {
                 break;
             default:
                 console.log("Invalid Input please select a mode or type 'Exit'.")
+                this.modeSelection();
                 break;
             }  
         }
@@ -64,130 +65,130 @@ class Game {
         
             if (this.player1.gestureSelection == "rock" && this.player2.gestureSelection == "scissors"){
                 this.player1.score++;
-               console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+               console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
                return
             }
             else if (this.player1.gestureSelection == "scissors" && this.player2.gestureSelection == "paper"){
                 this.player1.score++;
-                console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+                console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
                 return
         }
         else if (this.player1.gestureSelection == "paper" && this.player2.gestureSelection == "rock"){
             this.player1.score++;
-            console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
             return
             
         }
         else if (this.player1.gestureSelection == "rock" && this.player2.gestureSelection == "lizard"){
             this.player1.score++;
-            console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
             return
         }
         else if (this.player1.gestureSelection == "lizard" && this.player2.gestureSelection == "spock"){
             this.player1.score++;
-            console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
             return
         }
         else if (this.player1.gestureSelection == "spock" && this.player2.gestureSelection == "scissors"){
             this.player1.score++;
-            console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
             return
         }
         else if (this.player1.gestureSelection == "scissors" && this.player2.gestureSelection == "lizard"){
             this.player1.score++;
-            console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
             return
         }
         else if (this.player1.gestureSelection == "lizard" && this.player2.gestureSelection == "paper"){
             this.player1.score++;
-            console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
             return;
         }
         else if (this.player1.gestureSelection == "paper" && this.player2.gestureSelection == "spock"){
             this.player1.score++;
-            console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);
             return
         }
         else if (this.player1.gestureSelection == "spock" && this.player2.gestureSelection == "rock"){
             this.player1.score++;
-            console.log(this.player1.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player1.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`); 
             return;
         }
         /////////////////////////////////////////////////////////////////Player 2 win logic
         else if (this.player2.gestureSelection == "rock" && this.player1.gestureSelection == "scissors"){
             this.player2.score++;
-            console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score);
+            console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`); 
             return;
          }
          else if (this.player2.gestureSelection == "scissors" && this.player1.gestureSelection == "paper"){
              this.player2.score++;
-            console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+            console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);  
              return;
      }
      else if (this.player2.gestureSelection == "paper" && this.player1.gestureSelection == "rock"){
          this.player2.score++;
-        console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+        console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);  
          return;
          
      }
      else if (this.player2.gestureSelection == "rock" && this.player1.gestureSelection == "lizard"){
          this.player2.score++;
-        console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+        console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);  
          return;
      }
      else if (this.player2.gestureSelection == "lizard" && this.player1.gestureSelection == "spock"){
          this.player2.score++;
-        console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+        console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);  
          return;
      }
      else if (this.player2.gestureSelection == "spock" && this.player1.gestureSelection == "scissors"){
          this.player2.score++;
-        console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+        console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);  
          return;
      }
      else if (this.player2.gestureSelection == "scissors" && this.player1.gestureSelection == "lizard"){
          this.player2.score++;
-        console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+        console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);  
          return;
      }
      else if (this.player2.gestureSelection == "lizard" && this.player1.gestureSelection == "paper"){
          this.player2.score++;
-        console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+        console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);  
          return;
      }
      else if (this.player2.gestureSelection == "paper" && this.player1.gestureSelection == "spock"){
          this.player2.score++;
-        console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+        console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`);  
          return;
      }
      else if (this.player2.gestureSelection == "spock" && this.player1.gestureSelection == "rock"){
          this.player2.score++;
-        console.log(this.player2.name + " wins this round! The score is now " + this.player1.score + "-" + this.player2.score); 
+        console.log(`${this.player2.name} wins this round! The score is now: ${this.player1.score}-${this.player2.score}`); 
          return;
      }
      ////////////////////////////////////TIE LOGIC
      if (this.player1.gestureSelection == "rock" && this.player2.gestureSelection == "rock"){
-        console.log("It was a tie!" + this.player1.score + "-" + this.player2.score);
+        console.log(`It was a tie! ${this.player1.score}-${this.player2.score}`);
         return;
      }
      else if (this.player1.gestureSelection == "scissors" && this.player2.gestureSelection == "scissors"){
-        console.log("It was a tie!" + this.player1.score + "-" + this.player2.score);
+        console.log(`It was a tie! ${this.player1.score}-${this.player2.score}`);
         return;
  }
  
  else if (this.player2.gestureSelection == "paper" && this.player1.gestureSelection == "paper"){
-     console.log("It was a tie!" + this.player1.score + "-" + this.player2.score);
+     console.log(`It was a tie! ${this.player1.score}-${this.player2.score}`);
      return;
  }
  else if (this.player2.gestureSelection == "lizard" && this.player1.gestureSelection == "lizard"){
-    console.log("It was a tie!" + this.player1.score + "-" + this.player2.score);
+    console.log(`It was a tie! ${this.player1.score}-${this.player2.score}`);
     return;
     
  }
  else if (this.player2.gestureSelection == "spock" && this.player1.gestureSelection == "spock"){
-    console.log("It was a tie!" + this.player1.score + "-" + this.player2.score);
+    console.log(`It was a tie! ${this.player1.score}-${this.player2.score}`);
     return;
-/////////////////////////////////////////////////////////////////Default case logic
+    /////////////////////////////////////////////////////////////////Default case logic
  }
         else {
             this.gameLogic();
@@ -207,21 +208,5 @@ class Game {
     }
     
 }
-
-
-
-
- 
-//  while (this.player1.score < 2 && this.player2.score < 2) {
-//             if (this.player1.gestureSelection == "rock" && this.player2.gestureSelection == "scissors"){
-//                 console.log(this.player1.name + " wins this round!");
-//                 this.player1.score++
-//             }
-//            else{}
-//          }
-
-
-
-
 
 module.exports = Game;
