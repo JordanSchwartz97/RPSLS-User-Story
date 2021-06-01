@@ -29,7 +29,7 @@ class Game {
                 this.player2.randomGestureSelection();
                 this.gameLogic();
             }
-                // this.gameLogic();
+                this.winningPlayer();
                 break;
             case "human":
                 console.log("You've Selected to play against another human!");
@@ -48,7 +48,6 @@ class Game {
             }  
         }
     /////////////////////////////////////////////////////////////////////////////////////////////
-    
     humanAiBuilder(){
         this.player1 = new Human("Player 1");
         this.player2 = new Ai("Player 2");

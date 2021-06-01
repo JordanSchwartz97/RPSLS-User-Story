@@ -7,9 +7,9 @@ class Ai extends Player {
     }
     randomGestureSelection(){
         let randomNumber = Math.floor(Math.random() * (this.listOfGestures.length -1))
-       let gestureSelection = this.listOfGestures[randomNumber];
-        console.log(this.name + " selected "  + gestureSelection + ".");
-        return gestureSelection;  
+        this.gestureSelection = this.listOfGestures[randomNumber];
+        console.log(this.name + " selected "  + this.gestureSelection + ".");
+        return this.gestureSelection;  
     }
 
 
